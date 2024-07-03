@@ -1,6 +1,6 @@
 def chebyshev_distance(p1, p2):
-    """Docstring..."""
-    return max(abs(x - y) for x, y in zip(p1, p2))
+    """Première autre version de chebyshev_distance"""
+    return max(map(lambda xy: abs(xy[0] - xy[1]), zip(p1, p2)))
 
 if __name__ == "__main__":
     point1 = (1, 2, 3)
