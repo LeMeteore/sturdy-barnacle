@@ -1,8 +1,7 @@
-def chebyshev_distance(p1, p2, dim=0):
+import numpy as np
+def chebyshev_distance(p1, p2):
     """Docstring..."""
-    if dim == len(p1):
-        return 0
-    return max(abs(p1[dim] - p2[dim]), chebyshev_distance(p1, p2, dim + 1))
+    return np.max(np.abs(np.array(p1) - np.array(p2)))
 
 if __name__ == "__main__":
     point1 = (1, 2, 3)
