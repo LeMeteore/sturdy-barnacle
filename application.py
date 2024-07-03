@@ -1,3 +1,5 @@
+import numpy as np
+
 def chebyshev_distance(p1, p2):
     """Docstring..."""
     return max(abs(x - y) for x, y in zip(p1, p2))
@@ -20,3 +22,6 @@ def chebyshev_distance3(point1, point2):
     """Docstring..."""
     return max([abs(point1[i] - point2[i]) for i in range(len(point1))])
 
+def chebyshev_distance4(point1, point2):
+    """Docstring..."""
+    return np.max(np.abs(np.array(point1) - np.array(point2)))
