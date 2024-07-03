@@ -7,3 +7,10 @@ if __name__ == "__main__":
     point2 = (4, 5, 6)
     distance = chebyshev_distance(point1, point2)
     print("Chebyshev Distance:", distance)
+
+def chebyshev_distance_v2(point1, point2):
+    dimensions = len(point1)
+    max_dist = 0
+    for i in range(dimensions):
+        max_dist = max(max_dist, abs(point1[i] - point2[i]))
+    return max_dist
