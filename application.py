@@ -1,9 +1,13 @@
 def chebyshev_distance(p1, p2):
-    """Deuxième autre version de chebyshev_distance"""
+    """Troisième autre version de chebyshev_distance"""
     max_distance = 0
-    for x, y in zip(p1, p2):
-        max_distance = max(max_distance, abs(x-y))
-        return max_distance
+    while i < len(p1):
+        distance = abs(p1[i] - p2[i])
+        if distance > max_distance:
+            max_distance = distance
+        i +=1
+    return max_distance
+
 
 if __name__ == "__main__":
     point1 = (1, 2, 3)
