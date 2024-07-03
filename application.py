@@ -1,10 +1,8 @@
-def chebyshev_distance(p1, p2):
+def chebyshev_distance(p1, p2, dim=0):
     """Docstring..."""
-    assert len(p1) == len(p2)
-    distance = 0
-    for i in range(len(point1)):
-        distance = max(distance, abs(point1[i] - point2[i]))
-    return distance
+    if dim == len(p1):
+        return 0
+    return max(abs(p1[dim] - p2[dim]), chebyshev_distance(p1, p2, dim + 1))
 
 if __name__ == "__main__":
     point1 = (1, 2, 3)
