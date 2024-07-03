@@ -15,3 +15,8 @@ def chebyshev_distance2(point1, point2):
         if distance > max:
             max = distance
     return max
+
+def chebyshev_distance3(point1, point2):
+    """Docstring..."""
+    return max([abs(point1[i] - point2[i]) for i in range(len(point1))])
+
