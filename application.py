@@ -14,3 +14,8 @@ def chebyshev_distance_v2(point1, point2):
     for i in range(dimensions):
         max_dist = max(max_dist, abs(point1[i] - point2[i]))
     return max_dist
+
+import numpy as np
+
+def chebyshev_distance_v3(point1, point2):
+    return np.max(np.abs(point1 - point2))
